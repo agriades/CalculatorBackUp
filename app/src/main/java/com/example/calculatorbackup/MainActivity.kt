@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
         resLog = calLog //여태까지 개무시했던 resLog에 우선 String을 저장한다.
         println(resLog.split("+", "-", "*", "/")); println(operators)
 
-        var numList = resLog.split("+", "-", "*", "/") //여태까지 입력된 수의 list
+        val numList = resLog.split("+", "-", "*", "/") //여태까지 입력된 수의 list
         for (i in numList.indices) {
             when (operators[i]) { //문자열을 인덱스로 끊어두면 나오는 건 String이 아닌 Char!
                 '+' -> resLog = Simple().calAdd(numList[i], numList[i+1])
@@ -85,7 +85,7 @@ class MainActivity : AppCompatActivity() {
         //C 버튼 눌렀을 때 calLog, operators, resLog 초기화 및 텍스트뷰에 반영
         bt_clear.setOnClickListener {
             calLog = ""; tv_calLog.text = calLog
-            operators = "";
+            operators = ""
             resLog = ""; tv_resultLog.text = resLog
         }
     }
