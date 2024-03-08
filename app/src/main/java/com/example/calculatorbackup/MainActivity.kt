@@ -34,11 +34,8 @@ class MainActivity : AppCompatActivity() {
         val tv_calLog = findViewById<TextView>(R.id.tv_calLog) // = 누르기 전 현재입력이 출력되는 텍스트뷰
         val tv_resultLog = findViewById<TextView>(R.id.tv_resultLog) //최종결과가 출력되는 텍스트뷰
         //계산 위한 따로저장 인스턴스 String들
-        var calLog: String = "" //버튼 입력에 따라 현재입력에 문자를 하나씩 추가할 String 변수
-        var operators: String = "" //split으로 쪼개느라 사라진 연산자들을 차례로 저장할 String 변수
-
-
-        var resLog: String = ""
+        var calLog = "" //버튼 입력에 따라 현재입력에 문자를 하나씩 추가할 String 변수
+        var operators = "" //split으로 쪼개느라 사라진 연산자들을 차례로 저장할 String 변수
 
 
         //숫자 버튼이 눌릴 때 calLog 인스턴스에 저장 > 텍스트뷰의 글자로 보내기
@@ -61,7 +58,7 @@ class MainActivity : AppCompatActivity() {
 
         //여태까지는 계산 결과값이 안 뜨다가, = 기호를 누르면 나와야 한다.
         bt_equals.setOnClickListener {
-        resLog = calLog //여태까지 개무시했던 resLog에 우선 String을 저장한다.
+        var resLog = calLog //여태까지 개무시했던 resLog에 우선 String을 저장한다.
         println(resLog.split("+", "-", "*", "/")); println(operators)
 
         val numList = resLog.split("+", "-", "*", "/") //여태까지 입력된 수의 list
