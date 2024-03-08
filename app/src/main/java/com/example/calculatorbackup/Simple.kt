@@ -1,8 +1,8 @@
 package com.example.calculatorbackup
 
 class Simple {
-    fun calAdd(currentTotal : Float, valueToAdd: Float) = currentTotal + valueToAdd
-    fun calSubtract (currentTotal : Float, valueToSubtract: Float) = currentTotal - valueToSubtract
-    fun calMultiply (currentTotal: Float, valueToMultiply: Float) = currentTotal * valueToMultiply
-    fun calDivide (currentTotal: Float, valueToDivide: Float) = currentTotal / valueToDivide
+    fun calAdd(currentTotal : String, valueToAdd: String) = (currentTotal.toFloat() + valueToAdd.toFloat()).toString()
+    fun calSubtract (currentTotal : String, valueToSubtract: String) = (currentTotal.toFloat() - valueToSubtract.toFloat()).toString()
+    fun calMultiply (currentTotal: String, valueToMultiply: String) = (currentTotal.toFloat() * valueToMultiply.toFloat()).toString()
+    fun calDivide (currentTotal: String, valueToDivide: String) = (currentTotal.toFloat() / valueToDivide.toFloat()).toString()
 }
