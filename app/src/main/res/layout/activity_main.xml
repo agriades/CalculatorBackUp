@@ -20,27 +20,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="+"
-                android:textSize="50dp" />
+                android:textSize="50sp" />
 
             <Button
                 android:id="@+id/bt_subtract"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="-"
-                android:textSize="50dp" />
+                android:textSize="50sp" />
 
             <Button
                 android:id="@+id/bt_multiply"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="*"
-                android:textSize="50dp" />
+                android:textSize="50sp" />
             <Button
                 android:id="@+id/bt_divide"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="/"
-                android:textSize="50dp" />
+                android:textSize="50sp" />
         </TableRow>
         <TableRow
             android:layout_width="wrap_content"
@@ -51,21 +51,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="7"
-                android:textSize="50dp" />
+                android:textSize="50sp" />
 
             <Button
                 android:id="@+id/bt_eight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="8"
-                android:textSize="50dp" />
+                android:textSize="50sp" />
 
             <Button
                 android:id="@+id/bt_nine"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="9"
-                android:textSize="50dp" />
+                android:textSize="50sp" />
 
 
         </TableRow>
@@ -78,21 +78,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="6"
-                android:textSize="50dp" />
+                android:textSize="50sp" />
 
             <Button
                 android:id="@+id/bt_five"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="5"
-                android:textSize="50dp" />
+                android:textSize="50sp" />
 
             <Button
                 android:id="@+id/bt_four"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="4"
-                android:textSize="50dp" />
+                android:textSize="50sp" />
         </TableRow>
         <TableRow
             android:layout_width="wrap_content"
@@ -103,21 +103,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3"
-                android:textSize="50dp" />
+                android:textSize="50sp" />
 
             <Button
                 android:id="@+id/bt_two"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2"
-                android:textSize="50dp" />
+                android:textSize="50sp" />
 
             <Button
                 android:id="@+id/bt_one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:textSize="50dp" />
+                android:textSize="50sp" />
         </TableRow>
         <TableRow
             android:layout_width="wrap_content"
@@ -128,21 +128,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="C"
-                android:textSize="50dp" />
+                android:textSize="50sp" />
 
             <Button
                 android:id="@+id/bt_zero"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"
-                android:textSize="50dp" />
+                android:textSize="50sp" />
 
             <Button
                 android:id="@+id/bt_equals"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="="
-                android:textSize="50dp" />
+                android:textSize="50sp" />
         </TableRow>
     </TableLayout>
 
@@ -152,7 +152,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:text="값을 입력하세요."
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/tl_numpad"
         app:layout_constraintStart_toStartOf="@+id/tl_numpad" />
 
@@ -161,7 +161,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="*결과값 표시창*"
-        android:textSize="45dp"
+        android:textSize="45sp"
         app:layout_constraintBottom_toTopOf="@+id/tv_calLog"
         app:layout_constraintStart_toStartOf="@+id/tv_calLog" />
 
