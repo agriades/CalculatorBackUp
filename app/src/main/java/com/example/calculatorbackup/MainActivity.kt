@@ -2,6 +2,7 @@ package com.example.calculatorbackup
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 
@@ -60,18 +61,20 @@ class MainActivity : AppCompatActivity() {
         btEquals.setOnClickListener {
             var resLog = calLog //여태까지 개무시했던 resLog에 우선 String을 저장한다.
             val numList = resLog.split("+", "-", "*", "/") //여태까지 입력된 수의 list
+            Log.e("TAG", "${numList.indices}")
             for (i in numList.indices) {
-                resLog = when (operators[i]) { //문자열을 인덱스로 끊어두면 나오는 건 String이 아닌 Char!
-                    '+' -> Simple().calAdd(numList[i], numList[i+1])
-                    '-' -> Simple().calSubtract(numList[i], numList[i+1])
-                    '*' -> Simple().calMultiply(numList[i], numList[i+1])
-                    '/' -> Simple().calDivide(numList[i], numList[i+1])
-                    else -> resLog //얘가 없었어서 강종이 계속 됐나?
+                if (i < operators.length && numList[0].isNotEmpty()) { //아예 사칙연산만 눌렀을 때에도 예외 처리!
+                    resLog = when (operators[i]) { //문자열을 인덱스로 끊어두면 나오는 건 String이 아닌 Char!
+                        '+' -> Simple().calAdd(numList[i], numList.getOrNull(i+1) ?:"")
+                        '-' -> Simple().calSubtract(numList[i], numList.getOrNull(i+1) ?:"")
+                        '*' -> Simple().calMultiply(numList[i], numList.getOrNull(i+1) ?:"")
+                        '/' -> Simple().calDivide(numList[i], numList.getOrNull(i+1) ?:"")
+                        else -> resLog //얘가 없었어서 강종이 계속 됐나?
                 }
-            //calLog, operators, resLog 초기화 및 텍스트뷰에 반영 (아래와 똑같음)
-            tvResultLog.text = resLog
-            resLog = ""
-        }
+            }
+            tvResultLog.text = resLog; println(resLog)
+            calLog = ""; tvCalLog.text = calLog; operators = ""
+        } //calLog, operators, resLog 초기화 및 텍스트뷰에 반영 (아래와 똑같음)
 
 
         //C 버튼 눌렀을 때 calLog, operators, resLog 초기화 및 텍스트뷰에 반영
