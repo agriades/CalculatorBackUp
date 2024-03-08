@@ -70,7 +70,6 @@ class MainActivity : AppCompatActivity() {
                 }
             //calLog, operators, resLog 초기화 및 텍스트뷰에 반영 (아래와 똑같음)
             tvResultLog.text = resLog
-            println(tvResultLog)
             resLog = ""
         }
 
